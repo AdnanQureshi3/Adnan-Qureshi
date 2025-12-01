@@ -4,6 +4,8 @@ import Navigation from "./ui/Navigation";
 import Hero from "./ui/Hero";
 import AboutSection from "./ui/About";
 import Footer from "./ui/Footer";
+import SkillsSection from "./ui/SkillSection";
+
 
 function useTheme() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
@@ -39,6 +41,8 @@ const App: React.FC = () => {
       <main className="max-w-7xl mx-auto">
         <Hero theme={theme} />
         <AboutSection theme={theme} />
+        <SkillsSection activeTab="frontend" setActiveTab={() => {}} techStackData={{}} />
+
       </main>
 
       <Footer />
