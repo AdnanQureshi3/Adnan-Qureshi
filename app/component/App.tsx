@@ -80,6 +80,8 @@ const App: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
   const activeSection = useScrollSpy();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState('frontend');
+
 
   return (
     <>
@@ -94,7 +96,11 @@ const App: React.FC = () => {
       <main className="max-w-7xl mx-auto">
         <Hero theme={theme} />
         <AboutSection theme={theme} />
-        <SkillsSection activeTab="frontend" setActiveTab={() => {}} techStackData={{}} />
+        <SkillsSection 
+          activeTab={activeTab} 
+          setActiveTab={setActiveTab} 
+          techStackData={techStackData} 
+        />
           <ProjectsSection 
           projectData={projectData} 
           
