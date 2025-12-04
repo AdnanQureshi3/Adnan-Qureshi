@@ -5,6 +5,7 @@ import Hero from "./ui/Hero";
 import AboutSection from "./ui/About";
 import Footer from "./ui/Footer";
 import SkillsSection from "./ui/SkillSection";
+import ContactSection from "./ui/ContactSection";
 
 
 function useTheme() {
@@ -42,6 +43,7 @@ const App: React.FC = () => {
         <Hero theme={theme} />
         <AboutSection theme={theme} />
         <SkillsSection activeTab="frontend" setActiveTab={() => {}} techStackData={{}} />
+          <ContactSection theme={theme} />
 
       </main>
 
