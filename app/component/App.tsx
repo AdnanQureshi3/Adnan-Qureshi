@@ -96,6 +96,52 @@ const App: React.FC = () => {
       <main className="max-w-7xl mx-auto">
         <Hero theme={theme} />
         <AboutSection theme={theme} />
+        <section id="education" className="section-padding border-t border-[#30363d]">
+  <h2 className="text-4xl font-bold text-center text-white mb-12">Education</h2>
+
+  <div className="max-w-4xl mx-auto space-y-8">
+
+    {/* B.Tech */}
+    <div className="card p-6 rounded-xl hover:shadow-indigo-500/30 transition duration-300">
+      <div className="flex justify-between items-start mb-2">
+        <h3 className="text-2xl font-semibold text-white">
+          B.Tech in Electronics and Communication Engineering
+        </h3>
+        <span className="text-sm text-indigo-400 font-medium bg-indigo-900/20 px-3 py-1 rounded-full">
+          2022 - 2026
+        </span>
+      </div>
+      <p className="text-lg text-gray-400 mb-2">NIT Hamirpur, Himachal Pradesh</p>
+      <p className="text-sm text-gray-500">Ongoing undergraduate degree.</p>
+    </div>
+
+    {/* 12th */}
+    <div className="card p-6 rounded-xl hover:shadow-indigo-500/30 transition duration-300">
+      <div className="flex justify-between items-start mb-2">
+        <h3 className="text-2xl font-semibold text-white">12th (Science)</h3>
+        <span className="text-sm text-indigo-400 font-medium bg-indigo-900/20 px-3 py-1 rounded-full">
+          2021
+        </span>
+      </div>
+      <p className="text-lg text-gray-400 mb-2">BBVM School, Agra, Uttar Pradesh</p>
+      <p className="text-sm text-gray-500">Completed Higher Secondary Education.</p>
+    </div>
+
+    {/* 10th */}
+    <div className="card p-6 rounded-xl hover:shadow-indigo-500/30 transition duration-300">
+      <div className="flex justify-between items-start mb-2">
+        <h3 className="text-2xl font-semibold text-white">10th</h3>
+        <span className="text-sm text-indigo-400 font-medium bg-indigo-900/20 px-3 py-1 rounded-full">
+          2017 - 2019
+        </span>
+      </div>
+      <p className="text-lg text-gray-400 mb-2">BBVM School, Agra, Uttar Pradesh</p>
+      <p className="text-sm text-gray-500">Completed Secondary Education.</p>
+    </div>
+
+  </div>
+</section>
+
         <SkillsSection 
           activeTab={activeTab} 
           setActiveTab={setActiveTab} 
