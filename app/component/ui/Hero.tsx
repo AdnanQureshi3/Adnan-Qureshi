@@ -55,8 +55,8 @@ const Hero: React.FC<HeroProps> = () => {
             <div className="max-w-6xl px-4">
                 <div className="flex justify-center mb-2">
                     <img 
-                        className="w-40 h-40 md:w-80 md:h-80 rounded-full object-cover border-4 border-indigo-500 shadow-xl ring-4 ring-indigo-500/30" 
-                        src="/image.png" 
+                        className="w-36 h-36 md:w-80 md:h-80 rounded-full object-cover border-4 border-indigo-500 shadow-xl ring-4 ring-indigo-500/30" 
+                        src="image.png" 
                         alt="Profile Avatar"
                         onError={(e) => (e.currentTarget.src = 'https://placehold.co/150x150/1e293b/ffffff?text=AQ')}
                     />
@@ -70,6 +70,12 @@ const Hero: React.FC<HeroProps> = () => {
          
 
                 <div className="flex justify-center space-x-4 mt-8">
+                    <a 
+                        href="https://docs.google.com/document/d/1-lHS3BlwMMxroerSankqhK6dinusuJIHT6s-NLqdaAo/edit?usp=sharing" 
+                        className="interactable inline-block px-8 py-3 border border-indigo-600 text-indigo-400 font-semibold rounded-full shadow-lg hover:bg-indigo-600 hover:text-white transform transition duration-300 hover:scale-105"
+                    >
+                        Get Resume
+                    </a>
                     <a 
                         href="#projects" 
                         className="interactable inline-block px-8 py-3 bg-indigo-600 text-white font-semibold rounded-full shadow-lg hover:bg-indigo-700 transform transition duration-300 hover:scale-105"

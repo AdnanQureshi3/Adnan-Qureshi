@@ -253,20 +253,28 @@ const App: React.FC = () => {
           <div className="max-w-4xl mx-auto space-y-8">
             <div className="card p-6 rounded-xl hover:shadow-indigo-500/30 transition duration-300">
               <div className="flex justify-between items-start mb-2">
-                <h3 className="text-2xl font-semibold text-white">Master of Science in Computer Science</h3>
-                <span className="text-sm text-indigo-400 font-medium bg-indigo-900/20 px-3 py-1 rounded-full">2018 - 2020</span>
+                <h3 className="text-2xl font-semibold text-white">Bachelors in Electronics and Communication.</h3>
+                <span className="text-sm text-indigo-400 font-medium bg-indigo-900/20 px-3 py-1 rounded-full">2022 - 2026</span>
               </div>
-              <p className="text-lg text-gray-400 mb-2">Stanford University | Palo Alto, CA</p>
-              <p className="text-sm text-gray-500">Specialization in Distributed Systems and Artificial Intelligence.</p>
+              <p className="text-lg text-gray-400 mb-2">NIT Hamirpur | Hamirpur, India</p>
+              <p className="text-sm text-gray-500">Specialization in Electronics and Communication Engineering.</p>
             </div>
 
             <div className="card p-6 rounded-xl hover:shadow-indigo-500/30 transition duration-300">
               <div className="flex justify-between items-start mb-2">
-                <h3 className="text-2xl font-semibold text-white">Bachelor of Technology in Information Technology</h3>
-                <span className="text-sm text-indigo-400 font-medium bg-indigo-900/20 px-3 py-1 rounded-full">2014 - 2018</span>
+                <h3 className="text-2xl font-semibold text-white">Senior Secondary (12th) – CBSE</h3>
+                <span className="text-sm text-indigo-400 font-medium bg-indigo-900/20 px-3 py-1 rounded-full">2019 - 2021</span>
               </div>
-              <p className="text-lg text-gray-400 mb-2">Indian Institute of Technology (IIT) Delhi | New Delhi, India</p>
-              <p className="text-sm text-gray-500">Graduated with Honors. Thesis on real-time data streaming architectures.</p>
+              <p className="text-lg text-gray-400 mb-2">B.B.V.M School | Agra, UP</p>
+             
+            </div>
+            <div className="card p-6 rounded-xl hover:shadow-indigo-500/30 transition duration-300">
+              <div className="flex justify-between items-start mb-2">
+                <h3 className="text-2xl font-semibold text-white">High School (10th) – CBSE</h3>
+                <span className="text-sm text-indigo-400 font-medium bg-indigo-900/20 px-3 py-1 rounded-full">2017 - 2019</span>
+              </div>
+              <p className="text-lg text-gray-400 mb-2">B.B.V.M School | Agra, UP</p>
+             
             </div>
           </div>
         </section>
