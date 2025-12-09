@@ -18,4 +18,7 @@ export interface ProjectData {
     description: string;
     tech: string[];
     imgSrc: string;
+    Demo?: string;
+    Live?: string;
+    Github: string;
 }

@@ -46,22 +46,34 @@ const techStackData: Record<string, TechStackItem[]> = {
 // Data that defines the Projects
 const projectData: ProjectData[] = [
     {
-        title: 'E-Commerce Platform',
+        title: 'Up-Chain',
         description: 'A full-stack application built with React and Node.js. Features include user authentication, payment processing, and admin dashboards.',
-        tech: ['React', 'Node.js', 'MongoDB'],
-        imgSrc: "https://placehold.co/600x400/273a5a/ffffff?text=E-Commerce+Platform"
+        tech: ['React', 'Node.js', 'MongoDB' , 'Google GenAI'],
+        imgSrc: "https://placehold.co/600x400/273a5a/ffffff?text=Up-Chain",
+        Demo: 'https://up-chain.vercel.app/',
+        Live: 'https://upchain-6wrp.onrender.com/',
+        Github: 'https://github.com/AdnanQureshi3/Upchain',
+
     },
     {
-        title: 'Data Analytics Dashboard',
-        description: 'An interactive dashboard for visualizing complex datasets using Vue.js and D3.js. Optimized for performance.',
-        tech: ['Vue.js', 'D3.js', 'PostgreSQL'],
-        imgSrc: "https://placehold.co/600x400/273a5a/ffffff?text=Data+Visualization+Tool"
+        title: 'FileMan',
+        description: 'FileMan is a modern and secure file-sharing platform designed for seamless uploads, sharing, and management.',
+        tech: ['Node.js', 'Razor Pay', 'PostgreSQL'],
+        imgSrc: "https://placehold.co/600x400/273a5a/ffffff?text=Data+Visualization+Tool",
+        Demo: 'https://up-chain.vercel.app/',
+        Live: 'https://fileman.onrender.com/',
+        Github: 'https://github.com/AdnanQureshi3/FileMan',
+
     },
     {
-        title: 'Cross-Platform Mobile App',
+        title: 'CPU Scheduler Visualizer',
         description: 'A habit tracking mobile application built using React Native and Firebase for real-time data synchronization.',
-        tech: ['React Native', 'Firebase', 'Jest'],
-        imgSrc: "https://placehold.co/600x400/273a5a/ffffff?text=Mobile+App+Concept"
+        tech: ['React', 'Chart.js'],
+        imgSrc: "https://placehold.co/600x400/273a5a/ffffff?text=Mobile+App+Concept",
+        Demo: 'https://up-chain.vercel.app/',
+        Live: 'https://cpu-schedular-one.vercel.app/',
+        Github: 'https://github.com/AdnanQureshi3/CPU-Schedular',
+
     }
 ];
 
@@ -112,15 +124,76 @@ const App: React.FC = () => {
         }
 
         /* Light Mode Overrides */
-        body[data-theme='light'] {
-            --bg-primary: #f8f9fa;     
-            --text-primary: #212529;   
-            --card-bg: #ffffff;        
-            --border-color: #e9ecef;
-            --sub-card-bg: #e9ecef;
-            --shadow-color: rgba(99, 102, 241, 0.15);
-            --bg-pattern-color: #ced4da;
-        }
+        /* --------------------------------------- */
+/* ⭐ MASTER LIGHT MODE OVERRIDES (global)  */
+/* --------------------------------------- */
+body[data-theme='light'] {
+    /* Base colors */
+    --_light-bg: #f7f8fa;
+    --_light-text: #1a1d21;
+    --_light-muted: #4a4f55;
+    --_light-border: #d0d4da;
+    --_light-card: #ffffff;
+    --_light-subcard: #f1f3f5;
+}
+
+/* Force background */
+body[data-theme='light'] {
+    background-color: var(--_light-bg) !important;
+}
+
+/* Fix ALL text colors (even text-white, text-gray classes) */
+body[data-theme='light'] h1,
+body[data-theme='light'] h2,
+body[data-theme='light'] h3,
+body[data-theme='light'] h4,
+body[data-theme='light'] h5,
+body[data-theme='light'] h6,
+body[data-theme='light'] p,
+body[data-theme='light'] span,
+body[data-theme='light'] a,
+body[data-theme='light'] li,
+body[data-theme='light'] div {
+    color: var(--_light-text) !important;
+}
+
+/* Fix muted/secondary text */
+body[data-theme='light'] .text-gray-400,
+body[data-theme='light'] .text-gray-500,
+body[data-theme='light'] .text-gray-300 {
+    color: var(--_light-muted) !important;
+}
+
+/* Fix cards */
+body[data-theme='light'] .card {
+    background-color: var(--_light-card) !important;
+    border-color: var(--_light-border) !important;
+}
+
+/* Fix sub-cards (tech items, tags) */
+body[data-theme='light'] .tech-item {
+    background-color: var(--_light-subcard) !important;
+    border-color: var(--_light-border) !important;
+}
+
+/* Fix global borders */
+body[data-theme='light'] *, 
+body[data-theme='light'] .border,
+body[data-theme='light'] [class*='border-'] {
+    border-color: var(--_light-border) !important;
+}
+
+/* Make buttons look correct */
+body[data-theme='light'] .interactable {
+    color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+}
+
+body[data-theme='light'] .interactable:hover {
+    background-color: var(--accent-color) !important;
+    color: white !important;
+}
+
         
         /* --- 2. Core Styles (using variables) --- */
         body {

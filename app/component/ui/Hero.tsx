@@ -61,7 +61,7 @@ const Hero: React.FC<HeroProps> = () => {
                         onError={(e) => (e.currentTarget.src = 'https://placehold.co/150x150/1e293b/ffffff?text=AQ')}
                     />
                 </div>
-                <h1 className="text-5xl md:text-7xl font-extrabold mb-4 leading-tight">
+                <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
                     Hello, I'm <span className="text-indigo-400">Adnan Qureshi</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-400 mb-8">
@@ -72,19 +72,19 @@ const Hero: React.FC<HeroProps> = () => {
                 <div className="flex justify-center space-x-4 mt-8">
                     <a 
                         href="https://docs.google.com/document/d/1-lHS3BlwMMxroerSankqhK6dinusuJIHT6s-NLqdaAo/edit?usp=sharing" 
-                        className="interactable inline-block px-8 py-3 border border-indigo-600 text-indigo-400 font-semibold rounded-full shadow-lg hover:bg-indigo-600 hover:text-white transform transition duration-300 hover:scale-105"
+                        className="interactable inline-block px-6 py-3 border border-indigo-600 text-indigo-400 font-semibold rounded-full shadow-lg hover:bg-indigo-600 hover:text-white transform transition duration-300 hover:scale-105"
                     >
                         Get Resume
                     </a>
                     <a 
                         href="#projects" 
-                        className="interactable inline-block px-8 py-3 bg-indigo-600 text-white font-semibold rounded-full shadow-lg hover:bg-indigo-700 transform transition duration-300 hover:scale-105"
+                        className="interactable inline-block px-6 py-3 bg-indigo-600 text-white font-semibold rounded-full shadow-lg hover:bg-indigo-700 transform transition duration-300 hover:scale-105"
                     >
                         View Projects
                     </a>
                     <a 
                         href="#contact" 
-                        className="interactable inline-block px-8 py-3 border border-indigo-600 text-indigo-400 font-semibold rounded-full shadow-lg hover:bg-indigo-600 hover:text-white transform transition duration-300 hover:scale-105"
+                        className="interactable inline-block px-6 py-3 border border-indigo-600 text-indigo-400 font-semibold rounded-full shadow-lg hover:bg-indigo-600 hover:text-white transform transition duration-300 hover:scale-105"
                     >
                         Get In Touch
                     </a>

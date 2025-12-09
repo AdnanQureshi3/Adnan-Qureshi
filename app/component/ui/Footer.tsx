@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
     return (
         <footer className="bg-[#161b22] py-8 border-t border-[#30363d]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
-                <p className="mb-4">&copy; 2025 Jane Doe. All rights reserved.</p>
+                <p className="mb-4">&copy; 2025 Adnan Qureshi. All rights reserved.</p>
                 
                 {/* Minimal Footer Links */}
                 <div className="flex justify-center space-x-6 text-2xl mb-4">
