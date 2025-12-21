@@ -13,6 +13,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ activeTab, setActiveTab, 
         { id: 'frontend', label: 'Frontend' },
         { id: 'backend', label: 'Backend & Database' },
         { id: 'languages', label: 'Languages & Tools' },
+        { id: 'ai_genai', label: 'AI / GenAI' },
     ];
     
     return (
