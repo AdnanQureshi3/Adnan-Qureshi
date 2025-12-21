@@ -13,12 +13,13 @@ export interface TechStackItem {
     desc: string;
 }
 
+
 export interface ProjectData {
-    title: string;
-    description: string;
-    tech: string[];
-    imgSrc: string;
-    Demo?: string;
-    Live?: string;
-    Github: string;
+  title: string;
+  description: string;
+  tech: string[];
+  imgSrc: string;
+  Github: string;
+  Live?: string;
+  Demo?: string;
 }
