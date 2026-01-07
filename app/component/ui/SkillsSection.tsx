@@ -5,9 +5,12 @@ interface SkillsSectionProps {
     activeTab: string;
     setActiveTab: (tab: string) => void;
     techStackData: Record<string, TechStackItem[]>;
+   theme: 'light' | 'dark';
+
+    
 }
 
-const SkillsSection: React.FC<SkillsSectionProps> = ({ activeTab, setActiveTab, techStackData }) => {
+const SkillsSection: React.FC<SkillsSectionProps> = ({ activeTab, setActiveTab, techStackData , theme}) => {
     
     const tabs = [
         { id: 'frontend', label: 'Frontend' },

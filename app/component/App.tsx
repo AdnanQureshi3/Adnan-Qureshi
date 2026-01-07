@@ -243,10 +243,12 @@ const App: React.FC = () => {
           activeTab={activeTab} 
           setActiveTab={setActiveTab} 
           techStackData={techStackData} 
+          theme={theme}
         />
 
         <ProjectsSection 
           projectData={projectData} 
+          theme = {theme}
         />
 
         <ContactSection theme={theme} />

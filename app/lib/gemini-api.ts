@@ -2,6 +2,7 @@ import { AnalysisResult, PitchResult } from "../types";
 
 const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
 
+
 export async function exponentialBackoffFetch(url: string, options: RequestInit, maxRetries = 5): Promise<Response> {
   if (!apiKey) {
     throw new Error("NEXT_PUBLIC_GEMINI_API_KEY is missing from environment variables.");
