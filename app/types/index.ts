@@ -23,3 +23,10 @@ export interface ProjectData {
   Live?: string;
   Demo?: string;
 }
+
+import { IconType } from "react-icons";
+export interface SocialLink {
+  name: string;
+  url: string;
+  icon: IconType;
+}

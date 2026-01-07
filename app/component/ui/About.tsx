@@ -43,71 +43,133 @@ const AboutSection: React.FC<AboutSectionProps> = ({ theme }) => {
     }, [pitchRole]);
 
     return (
-        <section id="about" className="section-padding border-t border-[#30363d]">
-            <h2 className="text-4xl font-bold text-center mb-12">Who I Am</h2>
-            <div className="max-w-4xl mx-auto card p-8 rounded-xl shadow-2xl">
-                <p className="text-lg text-gray-400 mb-4" id="staticBioPart1">
-                    {developerBio.split('. ')[0]}.
-                </p>
-                <p className="text-lg text-gray-400" id="staticBioPart2">
-                    {developerBio.split('. ').slice(1).join('. ')}
-                </p>
+        <section
+  id="about"
+  className={`section-padding border-t ${
+    theme === 'light'
+      ? 'bg-gray-50 text-black border-gray-300'
+      : 'bg-transparent text-white border-[#30363d]'
+  }`}
+>
+  <h2 className="text-4xl font-bold text-center mb-12">
+    Who I Am
+  </h2>
 
-                {/* AI-POWERED PITCH GENERATOR */}
-                <div className="mt-8 pt-8 border-t border-[#30363d] space-y-4">
-                    <h3 className="text-2xl font-bold mb-4 flex items-center">
-                        <span className="mr-2 text-indigo-400">✨</span> Tailor My Pitch (AI Assistant)
-                    </h3>
-                    <p className="text-gray-400 text-sm mb-4">
-                        Enter a specific job role (e.g., "Cloud Architect") to see an instant, customized summary of how my skills align.
-                    </p>
-                    <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3">
-                        <input 
-                            type="text" 
-                            id="targetRoleInput" 
-                            placeholder="Enter target role, e.g., 'Gen AI Engineer'"
-                            className={`interactable grow px-4 py-2 rounded-lg ${theme === 'light' ? 'bg-white border-gray-300 text-black' : 'bg-[#0d1117] border-[#30363d] text-white'} focus:ring-indigo-500 focus:border-indigo-500 transition duration-300`}
-                            value={pitchRole}
-                            onChange={(e) => setPitchRole(e.target.value)}
-                        />
-                        <button 
-                            id="generatePitchBtn" 
-                            onClick={handlePitchGeneration} 
-                            disabled={isPitchLoading}
-                            className="interactable px-6 py-2 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition duration-300 disabled:opacity-50"
-                        >
-                            {isPitchLoading ? 'Generating...' : 'Generate Pitch'}
-                        </button>
-                    </div>
-                    
-                    <div id="pitchOutputArea" className={`mt-4 p-4 card rounded-lg ${pitchResult || pitchError || isPitchLoading ? 'block' : 'hidden'}`}>
-                        {isPitchLoading && (
-                            <div id="pitchLoading" className="flex flex-col items-center justify-center py-4">
-                                <div className="loader mb-2 border-gray-600 border-t-indigo-500"></div>
-                                <p className="text-sm text-gray-400">Crafting personalized pitch...</p>
-                            </div>
-                        )}
-                        
-                        {pitchError && !isPitchLoading && (
-                            <p className="text-red-400 text-center p-2 bg-red-900/10 rounded-lg">
-                                <span className="font-bold">Error:</span> {pitchError}
-                            </p>
-                        )}
+  <div
+    className={`max-w-4xl mx-auto p-8 rounded-xl border ${
+      theme === 'light'
+        ? 'bg-white border-gray-300 shadow-[0_8px_24px_rgba(0,0,0,0.08)]'
+        : 'bg-[#0d1117] border-[#30363d] shadow-[0_8px_30px_rgba(0,0,0,0.6)]'
+    }`}
+  >
+    <p
+      className={`text-lg mb-4 ${
+        theme === 'light' ? 'text-gray-700' : 'text-gray-400'
+      }`}
+    >
+      {developerBio.split('. ')[0]}.
+    </p>
 
-                        {pitchResult && !isPitchLoading && (
-                            <>
-                                <p id="tailoredPitchText" className="text-lg text-white font-medium">
-                                    {pitchResult.PITCH}
-                                </p>
-                                <p id="highlightedSkillsText" className="text-sm text-indigo-400 mt-2">
-                                    Skills Highlighted: {pitchResult.HIGHLIGHTED_SKILLS.join(' | ')}
-                                </p>
-                            </>
-                        )}
-                    </div>
-                </div>
-            </div>
-        </section>
+    <p
+      className={`text-lg ${
+        theme === 'light' ? 'text-gray-700' : 'text-gray-400'
+      }`}
+    >
+      {developerBio.split('. ').slice(1).join('. ')}
+    </p>
+
+    {/* AI PITCH */}
+    <div
+      className={`mt-8 pt-8 border-t space-y-4 ${
+        theme === 'light' ? 'border-gray-300' : 'border-[#30363d]'
+      }`}
+    >
+      <h3 className="text-2xl font-bold flex items-center">
+        <span className="mr-2 text-indigo-500">✨</span>
+        Tailor My Pitch (AI Assistant)
+      </h3>
+
+      <p
+        className={`text-sm ${
+          theme === 'light' ? 'text-gray-600' : 'text-gray-400'
+        }`}
+      >
+        Enter a specific job role (e.g., "Cloud Architect") to see an instant,
+        customized summary of how my skills align.
+      </p>
+
+      <div className="flex flex-col sm:flex-row gap-3">
+        <input
+          type="text"
+          placeholder="Enter target role, e.g., 'Gen AI Engineer'"
+          value={pitchRole}
+          onChange={(e) => setPitchRole(e.target.value)}
+          className={`interactable grow px-4 py-2 rounded-lg border transition duration-300
+            ${
+              theme === 'light'
+                ? 'bg-white border-gray-300 text-black focus:border-indigo-500'
+                : 'bg-[#010409] border-[#30363d] text-white focus:border-indigo-500'
+            }
+          `}
+        />
+
+        <button
+          onClick={handlePitchGeneration}
+          disabled={isPitchLoading}
+          className="interactable px-6 py-2 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition duration-300 disabled:opacity-50"
+        >
+          {isPitchLoading ? 'Generating...' : 'Generate Pitch'}
+        </button>
+      </div>
+
+      <div
+        className={`mt-4 p-4 rounded-lg border ${
+          pitchResult || pitchError || isPitchLoading ? 'block' : 'hidden'
+        } ${
+          theme === 'light'
+            ? 'bg-gray-50 border-gray-300'
+            : 'bg-[#0d1117] border-[#30363d]'
+        }`}
+      >
+        {isPitchLoading && (
+          <div className="flex flex-col items-center py-4">
+            <div className="loader mb-2 border-gray-400 border-t-indigo-500"></div>
+            <p
+              className={`text-sm ${
+                theme === 'light' ? 'text-gray-600' : 'text-gray-400'
+              }`}
+            >
+              Crafting personalized pitch…
+            </p>
+          </div>
+        )}
+
+        {pitchError && !isPitchLoading && (
+          <p className="text-red-500 text-center p-2 bg-red-500/10 rounded-lg">
+            <span className="font-bold">Error:</span> {pitchError}
+          </p>
+        )}
+
+        {pitchResult && !isPitchLoading && (
+          <>
+            <p
+              className={`text-lg font-medium ${
+                theme === 'light' ? 'text-black' : 'text-white'
+              }`}
+            >
+              {pitchResult.PITCH}
+            </p>
+            <p className="text-sm text-indigo-500 mt-2">
+              Skills Highlighted: {pitchResult.HIGHLIGHTED_SKILLS.join(' | ')}
+            </p>
+          </>
+        )}
+      </div>
+    </div>
+  </div>
+</section>
+
+     
     );
 };
 

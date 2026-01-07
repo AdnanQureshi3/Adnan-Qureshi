@@ -208,6 +208,17 @@ const App: React.FC = () => {
       <main className="max-w-7xl mx-auto">
         <Hero theme={theme} />
         <AboutSection theme={theme} />
+        <SkillsSection 
+          activeTab={activeTab} 
+          setActiveTab={setActiveTab} 
+          techStackData={techStackData} 
+          theme={theme}
+        />
+
+        <ProjectsSection 
+          projectData={projectData} 
+          theme = {theme}
+        />
 
         <section id="education" className={`section-padding border-t ${isLight ? 'border-slate-200' : 'border-[#30363d]'}`}>
           <h2 className={`text-4xl font-bold text-center mb-12 ${isLight ? 'text-slate-900' : 'text-white'}`}>Education</h2>
@@ -239,17 +250,7 @@ const App: React.FC = () => {
           </div>
         </section>
 
-        <SkillsSection 
-          activeTab={activeTab} 
-          setActiveTab={setActiveTab} 
-          techStackData={techStackData} 
-          theme={theme}
-        />
-
-        <ProjectsSection 
-          projectData={projectData} 
-          theme = {theme}
-        />
+        
 
         <ContactSection theme={theme} />
       </main>
