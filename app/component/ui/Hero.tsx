@@ -1,9 +1,6 @@
 "use client";
 import React, { useEffect } from 'react';
-import { SocialLink } from '@/app/types';
-import { FaGithub, FaLinkedin, FaCode } from "react-icons/fa";
-import { SiLeetcode } from "react-icons/si";
-
+import { socialLinks } from '@/app/lib/data';
 
 interface HeroProps {
     theme: 'light' | 'dark';
@@ -11,29 +8,7 @@ interface HeroProps {
 
 
 const Hero: React.FC<HeroProps> = () => {
-    const socialLinks: SocialLink[] = [
-  {
-    name: "GitHub",
-    icon: FaGithub,
-    url: "https://github.com/Adnanqureshi3",
-  },
-  {
-    name: "LinkedIn",
-    icon: FaLinkedin,
-    url: "https://www.linkedin.com/in/adnanq61",
-  },
-  {
-    name: "LeetCode",
-    icon: SiLeetcode,
-    url: "https://leetcode.com/u/Adnan_Qureshi_61/",
-  },
-  {
-    name: "Codeforces",
-    icon: FaCode,
-    url: "https://codeforces.com/profile/adnanq61",
-  },
-];
-
+  
     
     useEffect(() => {
         if (typeof window === 'undefined') return;
