@@ -42,38 +42,48 @@ export const techStackData: Record<string, TechStackItem[]> = {
 };
 
 export const projectData: ProjectData[] = [
-    {
-        title: 'Up-Chain',
-        description: 'A full-stack application built with React and Node.js. Features include user authentication, payment processing, and admin dashboards.',
-        tech: ['React', 'Node.js', 'MongoDB' , 'Google GenAI'],
-        imgSrc: "https://placehold.co/600x400/273a5a/ffffff?text=Up-Chain",
-        Demo: '',
-        Live: 'https://upchain-6wrp.onrender.com/',
-        Github: 'https://github.com/AdnanQureshi3/Upchain',
-    },
-    {
+  {
         title: 'WorkSight',
-        description: 'A full-stack application built with React and Node.js. Features include user authentication, payment processing, and admin dashboards.',
+        description: 'WorkSight is a local-first engine using on-device AI to categorize activity into granular focus domains. It delivers high-fidelity productivity analytics while ensuring total privacy through local processing.',
         tech: ['Electron.Js', 'Python', 'SQLite' , 'GenAI'],
         imgSrc: "https://placehold.co/600x400/273a5a/ffffff?text=WorkSight",
         Demo: '',
         Live: '',
         Github: 'https://github.com/AdnanQureshi3/WorkSight',
     },
+  {
+        title: 'AI Analyst',
+        description: 'An AI-powered RAG system using Google Gemini, FastAPI, and ChromaDB for intelligent incident analysis, automating root cause detection, pattern recognition, and context-aware solution generation.',
+        tech: ['FastAPI', 'RAG', 'ChromaDB' , 'LangChain'],
+        imgSrc: "https://placehold.co/600x400/273a5a/ffffff?text=AI+Analyst",
+        Demo: '',
+        Live: '',
+        Github: 'https://github.com/AdnanQureshi3/Ai-Analyzer',
+    },
     {
         title: 'FileMan',
         description: 'FileMan is a modern and secure file-sharing platform designed for seamless uploads, sharing, and management.',
         tech: ['Node.js', 'AWS','Razor Pay', 'PostgreSQL' ],
-        imgSrc: "https://placehold.co/600x400/273a5a/ffffff?text=FileMan",
+        imgSrc: "fileman.png",
         Demo: 'https://youtu.be/ZEmDZYrNBQ4',
         Live: 'https://fileman.onrender.com/',
         Github: 'https://github.com/AdnanQureshi3/FileMan',
     },
     {
+        title: 'Up-Chain',
+        description: 'A full-stack application built with React and Node.js. Features include user authentication, payment processing, and admin dashboards.',
+        tech: ['React', 'Node.js', 'MongoDB' , 'Google GenAI'],
+        imgSrc: "upchain.png",
+        Demo: '',
+        Live: 'https://upchain-6wrp.onrender.com/',
+        Github: 'https://github.com/AdnanQureshi3/Upchain',
+    },
+    
+    {
         title: 'CPU Scheduler Visualizer',
         description: 'A habit tracking mobile application built using React Native and Firebase for real-time data synchronization.',
         tech: ['React', 'Chart.js'],
-        imgSrc: "https://placehold.co/600x400/273a5a/ffffff?text=CPU Algo Visualizer",
+        imgSrc: "cpu-Scheduler.png",
         Demo: '',
         Live: 'https://cpu-schedular-one.vercel.app/',
         Github: 'https://github.com/AdnanQureshi3/CPU-Schedular',
