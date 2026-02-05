@@ -1,12 +1,14 @@
 "use client";
 import React, { useEffect } from 'react';
-
+import { socialLinks } from '@/app/lib/data';
 
 interface HeroProps {
     theme: 'light' | 'dark';
 }
 
+
 const Hero: React.FC<HeroProps> = () => {
+  
     
     useEffect(() => {
         if (typeof window === 'undefined') return;
@@ -51,9 +53,9 @@ const Hero: React.FC<HeroProps> = () => {
     }, []);
 
     return (
-        <section id="intro" className="section-padding min-h-screen flex items-center justify-center text-center">
+        <section id="intro" className="section-padding py-2 min-h-screen flex items-center justify-center text-center">
             <div className="max-w-6xl px-4">
-                <div className="flex justify-center mb-2">
+                <div className="flex justify-center ">
                     <img 
                         className="w-36 h-36 md:w-80 md:h-80 rounded-full object-cover border-4 border-indigo-500 shadow-xl ring-4 ring-indigo-500/30" 
                         src="image.png" 
@@ -61,6 +63,21 @@ const Hero: React.FC<HeroProps> = () => {
                         onError={(e) => (e.currentTarget.src = 'https://placehold.co/150x150/1e293b/ffffff?text=AQ')}
                     />
                 </div>
+                <div className="flex justify-center gap-6 mt-4 text-2xl">
+  {socialLinks.map(({ name, icon: Icon, url }) => (
+    <a
+      key={name}
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="transition hover:text-indigo-500"
+      aria-label={name}
+    >
+      <Icon />
+    </a>
+  ))}
+</div>
+
                 <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
                     Hello, I'm <span className="text-indigo-400">Adnan Qureshi</span>
                 </h1>
@@ -89,6 +106,7 @@ const Hero: React.FC<HeroProps> = () => {
                         Get In Touch
                     </a>
                 </div>
+                
             </div>
         </section>
     );
