@@ -46,7 +46,7 @@ export const projectData: ProjectData[] = [
         title: 'WorkSight',
         description: 'WorkSight is a local-first engine using on-device AI to categorize activity into granular focus domains. It delivers high-fidelity productivity analytics while ensuring total privacy through local processing.',
         tech: ['Electron.Js', 'Python', 'SQLite' , 'GenAI'],
-        imgSrc: "https://placehold.co/600x400/273a5a/ffffff?text=WorkSight",
+        imgSrc: "worksight.png",
         Demo: '',
         Live: '',
         Github: 'https://github.com/AdnanQureshi3/WorkSight',
@@ -81,7 +81,7 @@ export const projectData: ProjectData[] = [
     
     {
         title: 'CPU Scheduler Visualizer',
-        description: 'A habit tracking mobile application built using React Native and Firebase for real-time data synchronization.',
+        description: 'A real-time visualization tool for CPU scheduling algorithms, built with React and Chart.js.',
         tech: ['React', 'Chart.js'],
         imgSrc: "cpu-Scheduler.png",
         Demo: '',

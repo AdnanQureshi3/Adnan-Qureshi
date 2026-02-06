@@ -11,7 +11,7 @@ interface AboutSectionProps {
 
 
 const developerBio = `
-Adnan Qureshi is a final-year Computer Science student skilled in the MERN stack, cloud computing, and AI-powered applications. He has built production-ready platforms like UpChain and FileMan, integrating real-time systems, AWS S3, and agentic AI workflows. Adnan is strong in DSA, OS, DBMS, and problem-solving, with a focus on clean, scalable engineering. He is motivated by growth, stability, and building meaningful products. Currently, he is preparing for software engineering roles with an interest in startups and remote opportunities.
+Adnan Qureshi is a final-year student at NIT H skilled in the Fullstack, cloud computing, and AI-powered applications. He has built production-ready platforms like WorkSight and FileMan, integrating real-time systems, AWS S3, and agentic AI workflows. I am strong in DSA, OS, DBMS, and problem-solving, with a focus on clean, scalable engineering. He is motivated by growth, stability, and building meaningful products. Currently, he is preparing for software engineering roles with an interest in startups and remote opportunities.
 `;
 const AboutSection: React.FC<AboutSectionProps> = ({ theme }) => {
     const [pitchRole, setPitchRole] = useState('');
